@@ -53,9 +53,7 @@
 
 // export default Stopwatch;
 
-
-
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 function Stopwatch() {
   const [time, setTime] = useState(0); // Timer state in seconds
@@ -96,15 +94,17 @@ function Stopwatch() {
   const seconds = time % 60;
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
       <h1>Stopwatch</h1>
-      <h2>Time: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}</h2>
+      <h2>
+        Time: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
+      </h2>
       {!isRunning ? (
         <button onClick={handleStart}>Start</button>
       ) : (
         <button onClick={handleStop}>Stop</button>
       )}
-      <button onClick={handleReset} style={{ marginLeft: "10px" }}>
+      <button onClick={handleReset} style={{ marginLeft: '10px' }}>
         Reset
       </button>
     </div>
